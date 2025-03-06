@@ -9,9 +9,6 @@ Date: 2025-03-06
 Course: CSSE/MA 473
 """
 
-# import itertools
-# if extra time, look into the itertools library
-
 def generate_all_permutations(n):
     """
     Generate all permutations of n elements. 
