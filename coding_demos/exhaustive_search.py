@@ -104,3 +104,7 @@ if __name__ == '__main__':
     value, items = solve_knapsack(weights, values, W)
     print(f'Knapsack problem value: {value}')
     print(f'Items: {items}')
+
+    # (Optional) TODO 5: Create and solve larger instances. 
+    # At what input size n does exhaustive search 
+    # start to become impractical (too slow) for these problems?
