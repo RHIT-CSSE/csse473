@@ -11,7 +11,7 @@ Course: CSSE/MA 473
 
 def generate_all_permutations(n):
     """
-    Generate all permutations of n elements. 
+    Generate all permutations of n elements 0, 1, ..., n-1. 
     
     Args: 
         n (int): Number of elements to permute. 
@@ -25,12 +25,12 @@ def generate_all_permutations(n):
     # discussed in class, or if you're feeling adventurous, 
     # you can implement the Johnson-Trotter algorithm 
     # described in Levitin Section 4.3.
-    return [[i for i in range(1, n + 1)]]
+    return [[i for i in range(n)]]
 
 
 def generate_all_subsets(n):
     """
-    Generate all subsets of n elements. 
+    Generate all subsets of n elements 0, 1, ..., n-1. 
     
     Args: 
         n (int): Number of elements to choose from. 
@@ -44,7 +44,7 @@ def generate_all_subsets(n):
     # discussed in class, or if you're feeling adventurous,
     # you can implement the binary reflexive Gray code algorithm
     # described in Levitin Section 4.3. 
-    return [set([i for i in range(1, n + 1)])]
+    return [set([i for i in range(n)])]
 
 
 def solve_assignment(C):
@@ -52,14 +52,14 @@ def solve_assignment(C):
     Solves the assignment problem using exhaustive search.
 
     Args:
-        C (list): Cost matrix, where C[i - 1][j - 1] is the cost of
-        assigning worker 1 <= i <= n to task 1 <= j <= n.
+        C (list): Cost matrix, where C[i][j] is the cost of
+        assigning worker 0 <= i <= n-1 to task 0 <= j <= n-1.
 
     Returns:
         tuple: Tuple (cost, assignment), where 
         cost is the minimum possible cost and 
         assignment is a list of length n, 
-        where assignment[i-1] is the task assigned to worker i.
+        where assignment[i] is the task assigned to worker i.
     """
     # TODO 2: Implement this function. Use generate_all_permutations. 
     return (0, [0])
@@ -80,7 +80,7 @@ def solve_knapsack(weights, values, W):
         that achieves this maximum value. 
     """
     # TODO 4: Implement this function. Use generate_all_subsets. 
-    return (0, set())
+    return (0, set(0))
 
 
 if __name__ == '__main__':
